@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Product preview card component</title>
+  <link rel="stylesheet" href="all.min.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style src="https://kit.fontawesome.com/88cf53a176.js" crossorigin="anonymous">
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body{
+      background-color: hsl(30, 38%, 92%);
+    }
+    .father{
+      position: relative;
+      text-align: left;
+      margin: auto;
+      width: 650px;
+      height: 500px;
+      margin-top: 100px;
+      padding: 0 200px 200px 200px;
+      background-color:white;
+      border-radius: 15px;
+      font-family: 'Fraunces', serif;
+    }
+    .content{
+      position: absolute;
+      font-family: 'Fraunces', serif;
+      float: right;
+      margin-left: 160px;
+    }
+    .preview{
+      font-size: 14px;
+      font-weight: 100;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 7px;
+      color: hsl(228, 12%, 48%);
+      position: relative;
+      top: 40px;
+    }
+    .sd{
+      width: 250px;
+      position: relative;
+      font-size: 40px;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      top: 55px;
+    }
+    .para{
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: hsl(228, 12%, 48%);
+      font-weight: 400;
+      position: relative;
+      width: 240px;
+      line-height: 25px;
+      top: 80px;
+    }
+    .attribution{
+      position: relative;
+      margin: auto;
+      margin-top:50px;
+      float: both;
+    }
+    img{
+      position: absolute; 
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+      width: 325px;
+      height: 500px;
+      left: 0;
+    }
+    .price{
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      margin-top: 100px;
+      float: left;
+    }
+    .price1{
+      display: inline;
+      color: rgb(0, 122, 102);
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      position: relative;
+      padding-right: 30px;
+      font-size: 35px;
+      float: left;
+    }
+    .price2{
+     position: relative; 
+     display: inline;
+     color: rgb(126, 126, 126);
+     float: left;
+     margin-top: 10px;
+    }
+    button{
+      display: block;
+      position: relative;
+      clear: both;
+      background-color: rgb(0, 122, 102);
+      color: white;
+      border-radius: 10px;
+      border: none;
+      margin-top: 160px;
+      width: 250px;
+      padding: 15px;
+      font-size: 18px;
+    }
+    button:hover{
+      background-color: rgb(0, 64, 53);
+      cursor: pointer;
+    }
+    .add{
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      margin-left: 10px;
+    }
+    @media screen and (max-width:600px) {
+      .father{
+        position: relative;
+        width: 50vh;
+        margin: 0 auto;
+        height: 100vh;
+        margin-top: 15px;
+      }
+      img{
+        width: 100%;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 15px;
+        height: 35%;
+   
+      }
+      .content{
+        margin-left: -176px;
+        margin-top: 210px;
+      }
+      .preview{
+        font-size: 15px;
+        font-weight: bold;
+        bottom: 10px;
+       
+      }
+      .sd{
+        width: 370px;
+        font-size: 40px;
+        bottom: 50px;
+        position: relative;
+      }
+      .para{
+        width:300px;
+        font-size: 14px;
+      
+      }
+      .attribution{
+        text-align: center;
+        font-size: 12x;
+        margin: 0 auto;
+        margin-top: 25px;
+        padding-bottom: 10px;
+      }
+      .price1{
+        padding-right: 0px;
+        font-size: 40px;
+      }
+      .price2{
+        font-size: 17px;
+        margin-left: 20px;
+        bottom:-2px;
+      }
+      button{
+        font-size: 20px;
+        padding: 15px;
+        width: 95%;
+        margin-top: 170px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="father">
+    <div class="content">
+      <span class="preview">Perfume</span>
+
+      <h1 class="sd">Gabrielle Essence Eau De Parfum</h1>
+
+      <p class="para">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+      Perfumer-Creator for the House of CHANEL.</p>
+      <div class="price">
+        <h1 class="price1">$149.99</h1>
+        <span class="price2"><del>$169.99</del></span>
+      </div>
+    <button><span class="material-symbols-outlined">
+      </span><svg width="15" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z" fill="#FFF"/></svg><span class="add">Add to Cart</span></button>
+    </div>
+    <div class="pic" ><picture>
+      <source media="(min-width:450px)" srcset="image-product-desktop.jpg">
+      <source media="(min-width:450px)" srcset="image-product-mobile.jpg">
+      <img src="image-product-mobile.jpg">
+    </picture></div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/Mohghali900" target="_blank">Mohammed Elghali Neguia</a>.
+  </div>
+  <script src="all.min.js"></script>
+</body>
+</html>
